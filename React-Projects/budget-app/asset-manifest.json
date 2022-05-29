@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.1a8a0596.css",
-    "main.js": "/static/js/main.0bb9ea01.js",
-    "index.html": "/index.html",
-    "main.1a8a0596.css.map": "/static/css/main.1a8a0596.css.map",
-    "main.0bb9ea01.js.map": "/static/js/main.0bb9ea01.js.map"
+    "main.css": "/Projects/React-Projects/budget-app/static/css/main.1a8a0596.css",
+    "main.js": "/Projects/React-Projects/budget-app/static/js/main.0bb9ea01.js",
+    "index.html": "/Projects/React-Projects/budget-app/index.html",
+    "main.1a8a0596.css.map": "/Projects/React-Projects/budget-app/static/css/main.1a8a0596.css.map",
+    "main.0bb9ea01.js.map": "/Projects/React-Projects/budget-app/static/js/main.0bb9ea01.js.map"
   },
   "entrypoints": [
     "static/css/main.1a8a0596.css",
