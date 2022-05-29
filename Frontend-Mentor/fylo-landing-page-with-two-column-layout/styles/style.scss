@@ -1,0 +1,674 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+
+// ## Colors
+
+// ### Primary
+
+$very-dark-blue: hsl(243, 87%, 12%);
+$desaturated-blue: hsl(238, 22%, 44%);
+
+// ### Accent
+
+$bright-blue: hsl(224, 93%, 58%);
+$moderate-cyan: hsl(170, 45%, 43%);
+
+// ### Neutral
+
+$light-grayish-blue: hsl(240, 75%, 98%);
+$light-gray: hsl(0, 0%, 75%);
+
+// font families
+
+$openSans: "Open Sans", sans-serif;
+$raleway: "Raleway", sans-serif;
+
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $openSans;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  header,
+  .section,
+  footer {
+    padding: 0 2.5rem;
+  }
+
+  header {
+    padding-top: 4rem;
+    margin-bottom: 4rem;
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .logo {
+        height: 2.5rem;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 1.5rem;
+
+        .link {
+          font-size: 1.4rem;
+          font-family: $raleway;
+          color: $very-dark-blue;
+        }
+      }
+    }
+  }
+
+  main {
+    .section {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      gap: 4rem;
+
+      .left {
+        order: 2;
+        .heading {
+          font-size: 2.4rem;
+          color: $very-dark-blue;
+        }
+
+        .heading-subtext {
+          font-family: $raleway;
+          font-size: 1.6rem;
+          color: $very-dark-blue;
+          line-height: 1.4;
+          margin: 2rem 0;
+        }
+
+        .subheading {
+          font-size: 1.8rem;
+          text-align: center;
+          color: $very-dark-blue;
+        }
+
+        .subheading-subtext {
+          font-size: 1.4rem;
+          margin: 2rem 0;
+          color: $desaturated-blue;
+        }
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      .email,
+      .started-btn {
+        padding: 1.5rem 2rem;
+        border-radius: 5px;
+      }
+      .email {
+        border: 1px solid $very-dark-blue;
+        font-size: 1.4rem;
+        color: $light-gray;
+        font-family: $openSans;
+        width: 100%;
+
+        &:focus {
+          outline: none;
+          box-shadow: 2px 2px 5px rgb(240, 238, 238),
+            -2px -2px 5px rgb(240, 238, 238);
+        }
+
+        &::placeholder {
+          opacity: 0.5;
+        }
+      }
+
+      .error-msg {
+        display: block;
+        width: fit-content;
+        margin: 0.5rem;
+        font-size: 1.2rem;
+        color: red;
+        visibility: hidden;
+      }
+
+      .started-btn {
+        font-family: $raleway;
+        font-weight: 700;
+        font-size: 1.8rem;
+        border: none;
+        color: $light-grayish-blue;
+        background: $bright-blue;
+        cursor: pointer;
+        box-shadow: 4px 4px 5px rgb(240, 238, 238),
+          -4px -4px 5px rgb(240, 238, 238);
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    .section-1 {
+      margin-bottom: 10rem;
+    }
+
+    .bg {
+      height: 5rem;
+      background: url(../images/bg-curve-mobile.svg) no-repeat;
+    }
+
+    .section-2 {
+      background: hsla(240, 75%, 98%, 0.8);
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+      text-align: left;
+
+      .left {
+        .work-div {
+          display: flex;
+          align-items: center;
+          border-bottom: 2px solid $moderate-cyan;
+          width: fit-content;
+          margin: 0 auto;
+          gap: 1rem;
+          padding-bottom: 0.5rem;
+          cursor: pointer;
+
+          .work-link {
+            font-size: 1.4rem;
+            color: $moderate-cyan;
+          }
+
+          .arrow {
+            height: 2.5rem;
+          }
+
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+
+        .testimonial-card {
+          background: white;
+          border-radius: 5px;
+          box-shadow: 4px 4px 8px rgb(240, 238, 238),
+            -4px -4px 8px rgb(240, 238, 238);
+          padding: 2.5rem;
+          width: 90%;
+          margin: 4rem auto 0;
+
+          .testimonial {
+            margin: 1rem 0;
+            font-size: 1.2rem;
+            color: $very-dark-blue;
+            line-height: 1.4;
+          }
+
+          .name-div {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            .avatar {
+              height: 3rem;
+              border-radius: 50%;
+            }
+
+            .name {
+              font-weight: 700;
+              color: $very-dark-blue;
+              font-size: 1.2rem;
+              margin-bottom: 0.2rem;
+            }
+
+            .designation {
+              color: $desaturated-blue;
+            }
+          }
+        }
+      }
+    }
+
+    .section-3 {
+      background: $desaturated-blue;
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+      gap: 0;
+      .left {
+        order: -1;
+
+        .subheading,
+        .subheading-subtext {
+          color: $light-grayish-blue;
+        }
+      }
+
+      form {
+        .email {
+          border: 1px solid transparent;
+          box-shadow: 2px 2px 4px hsl(239, 22%, 46%),
+            -2px -2px 4px hsl(239, 22%, 46%);
+        }
+
+        .error-msg {
+          color: $light-grayish-blue;
+        }
+
+        .started-btn {
+          box-shadow: 2px 2px 4px hsl(239, 22%, 46%),
+            -2px -2px 4px hsl(239, 22%, 46%);
+        }
+      }
+    }
+  }
+
+  footer {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    color: $light-grayish-blue;
+    background: $very-dark-blue;
+
+    .logo {
+      filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(162deg)
+        brightness(103%) contrast(103%);
+    }
+
+    .flex-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      margin-top: 4rem;
+
+      .contact-div {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        &:first-child {
+          margin-bottom: 2rem;
+        }
+
+        .contact {
+          font-size: 1.6rem;
+        }
+      }
+
+      .links {
+        li:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+
+        .link {
+          font-size: 1.6rem;
+          color: $light-grayish-blue;
+
+          &:hover {
+            color: $desaturated-blue;
+          }
+        }
+      }
+
+      .social-icons-wrapper {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+
+        .social-icons {
+          border: 1px solid $light-grayish-blue;
+          border-radius: 50%;
+          width: 3rem;
+          height: 3rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+
+          i {
+            color: $light-grayish-blue;
+          }
+
+          &:hover {
+            border-color: $desaturated-blue;
+
+            i {
+              color: $desaturated-blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    header,
+    .section,
+    footer {
+      padding: 0 4rem;
+    }
+
+    header {
+      padding-top: 4rem;
+      margin-bottom: 4rem;
+      .navbar {
+        .logo {
+          height: 4rem;
+        }
+
+        .nav-links {
+          gap: 2rem;
+
+          .link {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+
+    main {
+      .section {
+        flex-direction: row;
+        text-align: left;
+
+        .left,
+        .right {
+          flex: 1;
+        }
+
+        .left {
+          order: -1;
+
+          .subheading {
+            font-size: 2.2rem;
+            text-align: left;
+          }
+
+          .subheading-subtext {
+            font-size: 1.6rem;
+          }
+        }
+      }
+
+      form {
+        .email {
+          font-size: 1.6rem;
+        }
+      }
+      .bg {
+        background: url(../images/bg-curve-desktop.svg) top center no-repeat;
+      }
+
+      .section-2 {
+        .left {
+          .work-div {
+            margin: 0;
+
+            .work-link {
+              font-size: 1.6rem;
+            }
+
+            .arrow {
+              height: 2.8rem;
+            }
+          }
+
+          .testimonial-card {
+            width: 100%;
+            margin-top: 4rem;
+
+            .testimonial {
+              font-size: 1.4rem;
+            }
+
+            .name-div {
+              .avatar {
+                height: 4rem;
+              }
+
+              .name {
+                font-size: 1.4rem;
+              }
+
+              .designation {
+                font-size: 1.2rem;
+              }
+            }
+          }
+        }
+      }
+
+      .section-3 {
+        gap: 4rem;
+
+        form {
+          .started-btn {
+            width: fit-content;
+          }
+        }
+      }
+    }
+
+    footer {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+
+      .flex-wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    header,
+    .section,
+    footer {
+      padding: 0 8rem;
+    }
+
+    header {
+      padding-top: 4rem;
+      margin-bottom: 4rem;
+    }
+
+    main {
+      .section {
+        align-items: center;
+
+        .right {
+          flex: 0.7;
+        }
+
+        .left {
+          .heading {
+            font-size: 2.8rem;
+          }
+
+          .subheading {
+            font-size: 2.8rem;
+          }
+
+          .subheading-subtext {
+            width: 50ch;
+          }
+        }
+
+        form {
+          flex-direction: row;
+          align-items: flex-start;
+          gap: 2rem;
+          .input-container {
+            width: 55%;
+          }
+
+          .started-btn {
+            padding: 1.5rem 3rem;
+          }
+        }
+      }
+
+      .section-2 {
+        .left {
+          .testimonial-card {
+            width: 65%;
+            margin-top: 4rem;
+            margin-left: 0;
+          }
+        }
+      }
+
+      .section-3 {
+        .left {
+          .subheading {
+            font-size: 2.4rem;
+          }
+
+          .subheading-subtext {
+            font-size: 1.4rem;
+          }
+        }
+
+        .right {
+          form {
+            flex-direction: column;
+            gap: 0;
+
+            .input-container {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    footer {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+
+      .social-icons-wrapper {
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    header {
+      padding-top: 4rem;
+      margin-bottom: 4rem;
+
+      .navbar {
+        .nav-links {
+          gap: 4rem;
+        }
+      }
+    }
+
+    main {
+      .section {
+        .right {
+          flex: 0.8;
+        }
+
+        .left {
+          .heading {
+            font-size: 4rem;
+          }
+
+          .heading-subtext {
+            font-size: 2rem;
+            max-width: 50ch;
+          }
+
+          .subheading {
+            font-size: 3.6rem;
+          }
+
+          .subheading-subtext {
+            width: 55ch;
+            font-size: 1.8rem;
+          }
+
+          .work-div {
+            .work-link {
+              font-size: 1.8rem;
+            }
+
+            .arrow {
+              height: 3.6rem;
+            }
+          }
+
+          form {
+            .started-btn {
+              padding: 1.5rem 6rem;
+            }
+          }
+        }
+      }
+
+      .bg {
+        background-size: 200%;
+      }
+
+      .section-2 {
+        .left {
+          .testimonial-card {
+            width: 50%;
+
+            .testimonial {
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+
+      .section-3 {
+        .left {
+          .subheading {
+            font-size: 3.2rem;
+          }
+
+          .subheading-subtext {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+
+    footer {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+
+      .flex-wrapper {
+        gap: 15%;
+        justify-content: unset;
+      }
+    }
+  }
+}

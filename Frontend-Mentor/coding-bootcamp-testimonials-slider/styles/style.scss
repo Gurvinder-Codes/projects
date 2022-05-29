@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+
+$Dark-Blue: hsl(240, 38%, 20%);
+$Grayis-Blue: hsl(240, 18%, 77%);
+
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../images/pattern-curve.svg) bottom left no-repeat;
+  background-size: 50vw 8vh;
+
+  img {
+    max-width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .left-div,
+    .right-div {
+      flex: 1;
+    }
+
+    .right-div {
+      padding: 4rem;
+      background: url(../images/pattern-bg.svg) center no-repeat;
+      background-size: contain;
+      position: relative;
+
+      .user-pic {
+        border-radius: 5px;
+      }
+
+      .slider {
+        position: absolute;
+        bottom: 2.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50px;
+
+        button {
+          background: #fff;
+          border: none;
+          cursor: pointer;
+          padding: 1rem;
+          width: 4rem;
+          float: left;
+        }
+
+        .next {
+          border-radius: 0 50px 50px 0;
+        }
+
+        .previous {
+          border-radius: 50px 0 0 50px;
+        }
+
+        .disabled {
+          background: rgb(207, 206, 206);
+        }
+      }
+    }
+
+    .left-div {
+      order: 2;
+      text-align: center;
+      background: url(../images/pattern-quotes.svg) top center no-repeat;
+      background-size: auto 21%;
+      padding-top: 2.5rem;
+
+      .testimonial {
+        font-weight: 300;
+        font-size: 1.8rem;
+        color: $Dark-Blue;
+        margin-bottom: 2rem;
+        line-height: 1.4;
+      }
+
+      .name {
+        color: $Dark-Blue;
+        margin-bottom: 0.5rem;
+        font-size: 1.4rem;
+      }
+
+      .designation {
+        color: $Grayis-Blue;
+        font-weight: 500;
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background: url(../images/pattern-curve.svg) bottom left no-repeat;
+    background-size: 50vw 10vh;
+    .container {
+      flex-direction: row;
+      align-items: center;
+
+      .left-div {
+        order: -1;
+        text-align: left;
+        background: url(../images/pattern-quotes.svg) top left 20% no-repeat;
+        background-size: auto 25%;
+        padding-top: 4rem;
+        transform: translateX(30%);
+        z-index: 1;
+
+        .testimonial {
+          font-size: 2.2rem;
+        }
+
+        .name-div {
+          .name {
+            font-size: 1.6rem;
+          }
+
+          .designation {
+            font-size: 1.6rem;
+          }
+        }
+      }
+
+      .right-div {
+        background: url(../images/pattern-bg.svg) center no-repeat;
+        background-size: contain;
+
+        .slider {
+          left: 12rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    background: url(../images/pattern-curve.svg) bottom left no-repeat;
+    background-size: 50vw 15vh;
+    .container {
+      .left-div {
+        transform: translateX(25%);
+
+        .testimonial {
+          max-width: 40ch;
+          font-size: 3.2rem;
+        }
+
+        .name-div {
+          display: flex;
+          align-items: center;
+
+          .name {
+            margin: 0 0.5rem 0;
+            font-size: 1.8rem;
+          }
+
+          .designation {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    .container {
+      .left-div {
+        transform: translateX(20%);
+      }
+    }
+  }
+}

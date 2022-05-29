@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <link
+      href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Frontend Mentor | Interactive pricing component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <main class="container">
+      <div class="heading-container">
+        <h1 class="heading">Simple, traffic-based pricing</h1>
+        <p class="sub-text">
+          Sign-up for our 30-day trial. <span> No credit card required. </span>
+        </p>
+      </div>
+      <div class="card">
+        <div class="price-container">
+          <p class="pageviews">100k Pageviews</p>
+          <div class="price-div">
+            <h2 class="price">$16.00</h2>
+            <span class="month">/ month</span>
+          </div>
+          <input
+            type="range"
+            value="16"
+            min="8"
+            max="36"
+            step="4"
+            class="range"
+          />
+        </div>
+
+        <div class="toggle-container">
+          <span class="billing-duration">Monthly Billing</span>
+          <label class="switch">
+            <input type="checkbox" class="billing-toggle" />
+            <span class="slider round"></span>
+          </label>
+          <span class="billing-duration">Yearly Billing</span>
+          <span class="discount">-25%</span>
+        </div>
+        <hr />
+
+        <div class="card-footer">
+          <div>
+            <ul>
+              <li class="benefits">Unlimited websites</li>
+              <li class="benefits">100% data ownership</li>
+              <li class="benefits">Email reports</li>
+            </ul>
+          </div>
+
+          <a class="start-link">Start my trial</a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

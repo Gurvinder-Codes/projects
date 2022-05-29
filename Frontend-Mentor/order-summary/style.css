@@ -1,0 +1,24 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:url(images/pattern-background-desktop.svg);background-size:contain;background-repeat:no-repeat;background-color:#e0e8ff;font-family:"Red Hat Display",sans-serif;font-size:16px;height:100vh;display:flex;align-items:center;justify-content:center}
+.card{height:auto;width:450px;border-radius:20px;background-color:#fff;overflow:hidden}
+.card-img img{width:100%;height:auto}
+.card-text{padding:30px;text-align:center}
+.heading{font-size:32px;font-weight:900;color:#1f2e56}
+.text{font-weight:500;color:#717fa6;margin:20px 0;line-height:1.6;padding:0 20px}
+.plan-container{background:#f4f7ff;border-radius:10px;padding:20px;display:flex;align-items:center;justify-content:space-between}
+.plan-container-left{display:flex}
+.plan-name{font-weight:900;margin-left:20px;line-height:1.6}
+.plan-amount{font-weight:500;color:#717fa6}
+.change{color:#3828e0;font-weight:900}
+.change:hover{text-decoration:none;opacity:.5}
+.proceed{margin:25px 0;background:#3828e0;font-weight:900;padding:16px 0;border-radius:10px;color:#fff;text-decoration:none;display:block;box-shadow:0 20px 16px hsla(245,64%,57%,.2)}
+.proceed:hover{opacity:.5}
+.cancel{display:block;text-decoration:none;font-weight:900;color:#717fa6}
+.cancel:hover{color:#1f2e56}
+@media screen and (max-width:480px){
+.card{width:90%}
+body{font-size:14px;background:url(images/pattern-background-mobile.svg);background-repeat:no-repeat;background-size:contain;background-color:#e0e8ff}
+.card-text{padding:20px}
+.heading{font-size:24px}
+.text{padding:0}
+}

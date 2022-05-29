@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  background: url(../images/bg-top.svg) top right no-repeat, url(../images/bg-bottom.svg) bottom left no-repeat, #f6f6fe;
+  background-size: 25vh;
+}
+
+body .container {
+  margin: 4rem 2rem;
+  text-align: center;
+}
+
+body .container .main-heading {
+  font-size: 2rem;
+  color: #6d708d;
+  margin-bottom: 2rem;
+}
+
+body .container .toggle-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container .toggle-container .toggle {
+  margin: 0 1rem;
+  position: relative;
+  width: 5rem;
+  height: 3rem;
+}
+
+body .container .toggle-container .toggle .toggle-input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+body .container .toggle-container .toggle .toggle-input:hover + .slider {
+  opacity: 0.5;
+}
+
+body .container .toggle-container .toggle .toggle-input:checked + .slider:before {
+  -webkit-transform: translateX(2rem);
+  transform: translateX(2rem);
+}
+
+body .container .toggle-container .toggle .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(to right, #a3a8f0, #696fdd);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+body .container .toggle-container .toggle .slider:before {
+  position: absolute;
+  content: "";
+  height: 2rem;
+  width: 2rem;
+  left: 5px;
+  bottom: 5.5px;
+  background-color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+body .container .toggle-container .toggle .slider.round {
+  border-radius: 34px;
+}
+
+body .container .toggle-container .toggle .slider.round:before {
+  border-radius: 50%;
+}
+
+body .container .toggle-container .duration {
+  font-size: 1.3rem;
+  color: #b3b5c6;
+}
+
+body .container .cards {
+  margin-top: 4rem;
+  display: -ms-grid;
+  display: grid;
+  gap: 2rem;
+}
+
+body .container .cards .card {
+  padding: 4rem 3rem 3rem;
+  background: #fff;
+  border-radius: 1rem;
+}
+
+body .container .cards .card .plan-type {
+  font-size: 1.4rem;
+  color: #6d708d;
+}
+
+body .container .cards .card .price {
+  font-size: 5rem;
+  color: #494c5f;
+  margin: 2rem 0;
+}
+
+body .container .cards .card .price .dollar {
+  font-size: 3rem;
+  vertical-align: middle;
+}
+
+body .container .cards .card .benefits {
+  list-style-type: none;
+  margin-bottom: 3rem;
+}
+
+body .container .cards .card .benefits .benefit {
+  padding: 1.5rem;
+  color: #6d708d;
+  font-size: 1.4rem;
+  border-top: 1px solid #b3b5c6;
+}
+
+body .container .cards .card .benefits .benefit:nth-child(3) {
+  border-bottom: 1px solid #b3b5c6;
+}
+
+body .container .cards .card .link-learn {
+  padding: 1rem;
+  text-decoration: none;
+  background: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(to right, #a3a8f0, #696fdd);
+  display: block;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+  border: 1px solid transparent;
+}
+
+body .container .cards .card .link-learn:hover {
+  color: #696fdd;
+  background: transparent;
+  border: 1px solid #696fdd;
+}
+
+body .container .cards .professional-card {
+  background: -webkit-gradient(linear, left top, left bottom, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(to bottom, #a3a8f0, #696fdd);
+}
+
+body .container .cards .professional-card .plan-type,
+body .container .cards .professional-card .price {
+  color: #fff;
+}
+
+body .container .cards .professional-card .benefits .benefit {
+  color: #fff;
+}
+
+body .container .cards .professional-card .link-learn {
+  color: #696fdd;
+  background: #fff;
+}
+
+body .container .cards .professional-card .link-learn:hover {
+  color: #fff;
+  background: transparent;
+  border: 1px solid #fff;
+}
+
+@media screen and (min-width: 768px) {
+  body .container {
+    width: 500px;
+    margin: 4rem auto;
+  }
+  body .container .main-heading {
+    font-size: 2.4rem;
+  }
+  body .container .cards .card .price {
+    font-size: 7rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: url(../images/bg-top.svg) top right no-repeat, url(../images/bg-bottom.svg) bottom left no-repeat, #f6f6fe;
+    background-size: 50vh;
+  }
+  body .container {
+    width: 900px;
+  }
+  body .container .cards {
+    margin-top: 6rem;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+  body .container .cards .card .plan-type {
+    font-size: 1.6rem;
+  }
+  body .container .cards .card .price {
+    font-size: 6rem;
+  }
+  body .container .cards .basic-card {
+    -webkit-transform: translateX(-3%);
+            transform: translateX(-3%);
+  }
+  body .container .cards .master-card {
+    -webkit-transform: translateX(3%);
+            transform: translateX(3%);
+  }
+  body .container .cards .professional-card {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    z-index: 1;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+
+$Soft-Cyan: hsl(174, 77%, 80%); //Full Slider Bar
+$Strong-Cyan: hsl(174, 86%, 45%); //(Slider Backround)
+$Light-Grayish-Red: hsl(14, 92%, 95%); //(Discount Background)
+$Light-Red: hsl(15, 100%, 70%); //(Discount Text)
+$Pale-Blue: hsl(226, 100%, 87%); //(CTA Text)
+$White: hsl(0, 0%, 100%); //(Pricing Component Background)
+$Very-Pale-Blue: hsl(230, 100%, 99%); //(Main Background)
+$Light-Grayish-Blue1: hsl(224, 65%, 95%); //(Empty Slider Bar)
+$Light-Grayish-Blue2: hsl(223, 50%, 87%); //(Toggle Background)
+$Grayish-Blue: hsl(225, 20%, 60%); //(Text)
+$Dark-Desaturated-Blue: hsl(227, 35%, 25%); //(Text & CTA Background)
+
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background: url(../images/bg-pattern.svg) no-repeat, $Very-Pale-Blue;
+  background-size: 100% 50%;
+}
+
+.container {
+  margin: 3rem 2rem;
+  text-align: center;
+  color: $Grayish-Blue;
+
+  .heading-container {
+    background: url(../images/pattern-circles.svg) top center no-repeat;
+    padding: 2rem 0 4rem;
+    background-size: contain;
+
+    .heading {
+      font-weight: 800;
+      font-size: 2rem;
+      color: $Dark-Desaturated-Blue;
+      margin-bottom: 1rem;
+    }
+
+    .sub-text {
+      font-weight: 600;
+      font-size: 1.2rem;
+      width: 50%;
+      margin: 0 auto;
+      line-height: 1.6;
+
+      span {
+        display: block;
+      }
+    }
+  }
+
+  .card {
+    background: $White;
+    margin-top: 2rem;
+    border-radius: 10px;
+
+    .price-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 3rem 2rem 0;
+
+      .pageviews {
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+      }
+
+      .range {
+        margin: 4rem 0;
+        -webkit-appearance: none;
+        background: $Light-Grayish-Blue1;
+        height: 0.8rem;
+        border-radius: 50px;
+        cursor: pointer;
+
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          height: 3.5rem;
+          width: 3.5rem;
+          background: url(../images/icon-slider.svg) center center no-repeat,
+            $Strong-Cyan;
+          background-size: 55%;
+          border-radius: 50%;
+          box-shadow: 0 1.5rem 1.5rem $Soft-Cyan;
+
+          &:hover,
+          &:focus {
+            opacity: 0.7;
+          }
+        }
+      }
+
+      .price-div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-row: 3/3;
+
+        .price {
+          font-size: 3rem;
+          font-weight: 800;
+          color: $Dark-Desaturated-Blue;
+          margin-right: 0.5rem;
+        }
+
+        .month {
+          font-size: 1.4rem;
+          vertical-align: middle;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .toggle-container {
+      text-align: right;
+      padding-right: 1rem;
+      margin: 3rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      .billing-duration {
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
+      .switch {
+        margin: 0 1rem;
+        position: relative;
+        display: inline-block;
+        width: 4rem;
+        height: 2rem;
+        vertical-align: middle;
+
+        /* Hide default HTML checkbox */
+        & input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+
+        /* The slider */
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: $Light-Grayish-Blue2;
+          -webkit-transition: 0.4s;
+          transition: 0.4s;
+        }
+
+        .slider:before {
+          position: absolute;
+          content: "";
+          height: 1.5rem;
+          width: 1.5rem;
+          left: 0.3rem;
+          bottom: 50%;
+          transform: translateY(50%);
+          background-color: white;
+          -webkit-transition: 0.4s;
+          transition: 0.4s;
+        }
+
+        input:checked + .slider {
+          background-color: $Soft-Cyan;
+        }
+
+        input:checked + .slider:before {
+          -webkit-transform: translate(2rem, 50%);
+          -ms-transform: translate(2rem, 50%);
+          transform: translate(2rem, 50%);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+          border-radius: 50px;
+        }
+
+        .slider.round:before {
+          border-radius: 50%;
+        }
+      }
+
+      .discount {
+        background: $Light-Grayish-Red;
+        color: $Light-Red;
+        padding: 0.3rem 1rem;
+        border-radius: 50px;
+        font-weight: 800;
+        margin-left: 0.5rem;
+      }
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background: $Light-Grayish-Blue1;
+    }
+
+    .card-footer {
+      padding: 2rem 0;
+
+      ul {
+        list-style-image: url(../images/icon-check.svg);
+
+        .benefits {
+          font-size: 1.2rem;
+          font-weight: 600;
+          width: fit-content;
+          position: relative;
+          margin: 0 auto 1rem;
+          padding-left: 0.5rem;
+        }
+      }
+
+      .start-link {
+        padding: 1rem 5rem;
+        background: $Dark-Desaturated-Blue;
+        font-size: 1.2rem;
+        display: block;
+        width: fit-content;
+        margin: 2rem auto 1rem;
+        border-radius: 50px;
+        font-weight: 800;
+        color: $Pale-Blue;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+          color: $White;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    min-width: 500px;
+    text-align: left;
+
+    .heading-container {
+      text-align: center;
+      .heading {
+        font-size: 2.8rem;
+      }
+
+      .sub-text {
+        width: 100%;
+        font-size: 1.5rem;
+
+        span {
+          display: initial;
+        }
+      }
+    }
+
+    .card {
+      .price-container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        padding: 3rem 3rem 0;
+
+        .pageviews {
+          font-size: 1.5rem;
+        }
+
+        .price-div {
+          grid-column: 2/3;
+          grid-row: 1/1;
+
+          .price {
+            font-size: 3.5rem;
+          }
+
+          .month {
+            font-size: 1.5rem;
+          }
+        }
+
+        .range {
+          grid-column: span 2;
+        }
+      }
+
+      .toggle-container {
+        margin: 0 0 3rem;
+        padding-right: 4rem;
+
+        .billing-duration {
+          font-size: 1.3rem;
+        }
+
+        .discount {
+          margin-left: 0.7rem;
+        }
+      }
+
+      .card-footer {
+        padding: 2rem 4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        ul {
+          .benefits {
+            width: initial;
+            font-size: 1.3rem;
+          }
+        }
+
+        .start-link {
+          margin: 0;
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: url(../images/pattern-curve.svg) bottom left no-repeat;
+  background-size: 50vw 8vh;
+}
+
+body img {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+
+body .container {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+body .container .left-div,
+body .container .right-div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+body .container .right-div {
+  padding: 4rem;
+  background: url(../images/pattern-bg.svg) center no-repeat;
+  background-size: contain;
+  position: relative;
+}
+
+body .container .right-div .user-pic {
+  border-radius: 5px;
+}
+
+body .container .right-div .slider {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 50px;
+}
+
+body .container .right-div .slider button {
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+  width: 4rem;
+  float: left;
+}
+
+body .container .right-div .slider .next {
+  border-radius: 0 50px 50px 0;
+}
+
+body .container .right-div .slider .previous {
+  border-radius: 50px 0 0 50px;
+}
+
+body .container .right-div .slider .disabled {
+  background: #cfcece;
+}
+
+body .container .left-div {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  text-align: center;
+  background: url(../images/pattern-quotes.svg) top center no-repeat;
+  background-size: auto 21%;
+  padding-top: 2.5rem;
+}
+
+body .container .left-div .testimonial {
+  font-weight: 300;
+  font-size: 1.8rem;
+  color: #202046;
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+body .container .left-div .name {
+  color: #202046;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+body .container .left-div .designation {
+  color: #babacf;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background: url(../images/pattern-curve.svg) bottom left no-repeat;
+    background-size: 50vw 10vh;
+  }
+  body .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .container .left-div {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    text-align: left;
+    background: url(../images/pattern-quotes.svg) top left 20% no-repeat;
+    background-size: auto 25%;
+    padding-top: 4rem;
+    -webkit-transform: translateX(30%);
+            transform: translateX(30%);
+    z-index: 1;
+  }
+  body .container .left-div .testimonial {
+    font-size: 2.2rem;
+  }
+  body .container .left-div .name-div .name {
+    font-size: 1.6rem;
+  }
+  body .container .left-div .name-div .designation {
+    font-size: 1.6rem;
+  }
+  body .container .right-div {
+    background: url(../images/pattern-bg.svg) center no-repeat;
+    background-size: contain;
+  }
+  body .container .right-div .slider {
+    left: 12rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    background: url(../images/pattern-curve.svg) bottom left no-repeat;
+    background-size: 50vw 15vh;
+  }
+  body .container .left-div {
+    -webkit-transform: translateX(25%);
+            transform: translateX(25%);
+  }
+  body .container .left-div .testimonial {
+    max-width: 40ch;
+    font-size: 3.2rem;
+  }
+  body .container .left-div .name-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .container .left-div .name-div .name {
+    margin: 0 0.5rem 0;
+    font-size: 1.8rem;
+  }
+  body .container .left-div .name-div .designation {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body .container .left-div {
+    -webkit-transform: translateX(20%);
+            transform: translateX(20%);
+  }
+}
+/*# sourceMappingURL=style.css.map */

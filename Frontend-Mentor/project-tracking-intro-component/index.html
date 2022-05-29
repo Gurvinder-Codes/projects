@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script defer src="index.js"></script>
+
+    <title>Frontend Mentor | Project tracking intro component</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="#"><img src="./images/logo.svg" alt="logo" class="logo" /></a>
+        <div class="nav-right">
+          <ul class="links">
+            <li><a href="#" class="link">product</a></li>
+            <li><a href="#" class="link">features</a></li>
+            <li><a href="#" class="link">pricing</a></li>
+          </ul>
+          <a href="#" class="login-link">login</a>
+        </div>
+      </nav>
+
+      <nav class="mobile-navbar">
+        <a href="#"><img src="./images/logo.svg" alt="logo" class="logo" /></a>
+        <button class="menu-btn">
+          <img
+            src="./images/icon-hamburger.svg"
+            alt="icon-hamburger"
+            class="menu-icon"
+          />
+        </button>
+        <div class="menu">
+          <ul class="links">
+            <li><a href="#" class="link">product</a></li>
+            <li><a href="#" class="link">features</a></li>
+            <li><a href="#" class="link">pricing</a></li>
+          </ul>
+          <hr />
+          <a href="#" class="login-link">login</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <div class="left">
+        <div class="heading-div">
+          <span class="heading-before">new</span>
+          <h1 class="heading">Monograph Dashboard</h1>
+        </div>
+        <h2 class="subheading">Powerful insights into your team</h2>
+        <h3 class="subheading-subtext">
+          Project planning and time tracking for agile teams
+        </h3>
+        <div class="demo-div">
+          <a href="#" class="schedule-link">Schedule a demo</a>
+          <span class="schedule-subtext">to see a preview</span>
+        </div>
+      </div>
+      <div class="right">
+        <img
+          src="./images/illustration-devices.svg"
+          alt="illustration-devices"
+        />
+      </div>
+      <div class="bg"></div>
+    </main>
+  </body>
+</html>

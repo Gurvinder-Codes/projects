@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+$very-light-grayish-blue: hsl(240, 78%, 98%);
+$light-grayish-blue: hsl(234, 14%, 74%);
+$grayish-blue: hsl(233, 13%, 49%);
+$dark-grayish-blue: hsl(232, 13%, 33%);
+
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  background: url(../images/bg-top.svg) top right no-repeat,
+    url(../images/bg-bottom.svg) bottom left no-repeat, $very-light-grayish-blue;
+  background-size: 25vh;
+
+  .container {
+    margin: 4rem 2rem;
+    text-align: center;
+
+    .main-heading {
+      font-size: 2rem;
+      color: $grayish-blue;
+      margin-bottom: 2rem;
+    }
+
+    .toggle-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .toggle {
+        margin: 0 1rem;
+        position: relative;
+        width: 5rem;
+        height: 3rem;
+
+        .toggle-input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+
+          &:hover + .slider {
+            opacity: 0.5;
+          }
+
+          &:checked + .slider:before {
+            -webkit-transform: translateX(2rem);
+            -ms-transform: translateX(2rem);
+            transform: translateX(2rem);
+          }
+        }
+
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(
+            to right,
+            hsl(236, 72%, 79%),
+            hsl(237, 63%, 64%)
+          );
+          -webkit-transition: 0.4s;
+          transition: 0.4s;
+
+          &:before {
+            position: absolute;
+            content: "";
+            height: 2rem;
+            width: 2rem;
+            left: 5px;
+            bottom: 5.5px;
+            background-color: #fff;
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
+          }
+
+          &.round {
+            border-radius: 34px;
+          }
+
+          &.round:before {
+            border-radius: 50%;
+          }
+        }
+      }
+
+      .duration {
+        font-size: 1.3rem;
+        color: $light-grayish-blue;
+      }
+    }
+
+    .cards {
+      margin-top: 4rem;
+      display: grid;
+      gap: 2rem;
+
+      .card {
+        padding: 4rem 3rem 3rem;
+        background: #fff;
+        border-radius: 1rem;
+
+        .plan-type {
+          font-size: 1.4rem;
+          color: $grayish-blue;
+        }
+
+        .price {
+          font-size: 5rem;
+          color: $dark-grayish-blue;
+          margin: 2rem 0;
+
+          .dollar {
+            font-size: 3rem;
+            vertical-align: middle;
+          }
+        }
+
+        .benefits {
+          list-style-type: none;
+          margin-bottom: 3rem;
+
+          .benefit {
+            padding: 1.5rem;
+            color: $grayish-blue;
+            font-size: 1.4rem;
+            border-top: 1px solid $light-grayish-blue;
+
+            &:nth-child(3) {
+              border-bottom: 1px solid $light-grayish-blue;
+            }
+          }
+        }
+
+        .link-learn {
+          padding: 1rem;
+          text-decoration: none;
+          background: linear-gradient(
+            to right,
+            hsl(236, 72%, 79%),
+            hsl(237, 63%, 64%)
+          );
+          display: block;
+          border-radius: 0.5rem;
+          text-transform: uppercase;
+          color: #fff;
+          letter-spacing: 1px;
+          font-size: 1.3rem;
+          border: 1px solid transparent;
+
+          &:hover {
+            color: hsl(237, 63%, 64%);
+            background: transparent;
+            border: 1px solid hsl(237, 63%, 64%);
+          }
+        }
+      }
+
+      .professional-card {
+        background: linear-gradient(
+          to bottom,
+          hsl(236, 72%, 79%),
+          hsl(237, 63%, 64%)
+        );
+        .plan-type,
+        .price {
+          color: #fff;
+        }
+
+        .benefits {
+          .benefit {
+            color: #fff;
+          }
+        }
+
+        .link-learn {
+          color: hsl(237, 63%, 64%);
+          background: #fff;
+
+          &:hover {
+            color: #fff;
+            background: transparent;
+            border: 1px solid #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    .container {
+      width: 500px;
+      margin: 4rem auto;
+      .main-heading {
+        font-size: 2.4rem;
+      }
+
+      .cards {
+        .card {
+          .price {
+            font-size: 7rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../images/bg-top.svg) top right no-repeat,
+      url(../images/bg-bottom.svg) bottom left no-repeat,
+      $very-light-grayish-blue;
+    background-size: 50vh;
+    .container {
+      width: 900px;
+
+      .cards {
+        margin-top: 6rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+
+        .card {
+          .plan-type {
+            font-size: 1.6rem;
+          }
+
+          .price {
+            font-size: 6rem;
+          }
+        }
+
+        .basic-card {
+          transform: translateX(-3%);
+        }
+
+        .master-card {
+          transform: translateX(3%);
+        }
+
+        .professional-card {
+          transform: scale(1.1);
+          z-index: 1;
+        }
+      }
+    }
+  }
+}

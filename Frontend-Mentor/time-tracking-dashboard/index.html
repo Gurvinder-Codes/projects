@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script defer src="index.js"></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="user-card">
+        <div class="user-info">
+          <img
+            src="./images/image-jeremy.png"
+            alt="image-jeremy"
+            class="user-pic"
+          />
+          <div class="name-container">
+            <p class="report">Report for</p>
+            <p class="name">Jeremy Robson</p>
+          </div>
+        </div>
+
+        <div class="duration-card">
+          <ul class="duration-list">
+            <li><button class="daily-btn duration-btn">Daily</button></li>
+            <li>
+              <button class="weekly-btn duration-btn active">Weekly</button>
+            </li>
+            <li><button class="monthly-btn duration-btn">Monthly</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="card work">
+        <div class="card-name-container">
+          <h2 class="card-name">Work</h2>
+          <img
+            src="./images/icon-ellipsis.svg"
+            alt="icon-ellipsis"
+            class="ellipsis"
+          />
+        </div>
+        <div class="hours-container">
+          <h3 class="current-hours">32hrs</h3>
+          <p class="previous-hours">Last Week - 36hrs</p>
+        </div>
+      </div>
+      <div class="card play">
+        <div class="card-name-container">
+          <h2 class="card-name">Play</h2>
+          <img
+            src="./images/icon-ellipsis.svg"
+            alt="icon-ellipsis"
+            class="ellipsis"
+          />
+        </div>
+        <div class="hours-container">
+          <h3 class="current-hours">10hrs</h3>
+          <p class="previous-hours">Last Week - 8hrs</p>
+        </div>
+      </div>
+      <div class="study card">
+        <div class="card-name-container">
+          <h2 class="card-name">Study</h2>
+          <img
+            src="./images/icon-ellipsis.svg"
+            alt="icon-ellipsis"
+            class="ellipsis"
+          />
+        </div>
+        <div class="hours-container">
+          <h3 class="current-hours">4hrs</h3>
+          <p class="previous-hours">Last Week - 7hrs</p>
+        </div>
+      </div>
+      <div class="exercise card">
+        <div class="card-name-container">
+          <h2 class="card-name">Exercise</h2>
+          <img
+            src="./images/icon-ellipsis.svg"
+            alt="icon-ellipsis"
+            class="ellipsis"
+          />
+        </div>
+        <div class="hours-container">
+          <h3 class="current-hours">4hrs</h3>
+          <p class="previous-hours">Last Week - 5hrs</p>
+        </div>
+      </div>
+      <div class="social card">
+        <div class="card-name-container">
+          <h2 class="card-name">Social</h2>
+          <img
+            src="./images/icon-ellipsis.svg"
+            alt="icon-ellipsis"
+            class="ellipsis"
+          />
+        </div>
+        <div class="hours-container">
+          <h3 class="current-hours">5hrs</h3>
+          <p class="previous-hours">Last Week - 10hrs</p>
+        </div>
+      </div>
+      <div class="self-care card">
+        <div class="card-name-container">
+          <h2 class="card-name">Self Care</h2>
+          <img
+            src="./images/icon-ellipsis.svg"
+            alt="icon-ellipsis"
+            class="ellipsis"
+          />
+        </div>
+        <div class="hours-container">
+          <h3 class="current-hours">2hrs</h3>
+          <p class="previous-hours">Last Week - 2hrs</p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

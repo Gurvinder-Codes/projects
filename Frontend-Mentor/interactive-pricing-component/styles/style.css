@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background: url(../images/bg-pattern.svg) no-repeat, #fafbff;
+  background-size: 100% 50%;
+}
+
+.container {
+  margin: 3rem 2rem;
+  text-align: center;
+  color: #858fad;
+}
+
+.container .heading-container {
+  background: url(../images/pattern-circles.svg) top center no-repeat;
+  padding: 2rem 0 4rem;
+  background-size: contain;
+}
+
+.container .heading-container .heading {
+  font-weight: 800;
+  font-size: 2rem;
+  color: #293356;
+  margin-bottom: 1rem;
+}
+
+.container .heading-container .sub-text {
+  font-weight: 600;
+  font-size: 1.2rem;
+  width: 50%;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.container .heading-container .sub-text span {
+  display: block;
+}
+
+.container .card {
+  background: white;
+  margin-top: 2rem;
+  border-radius: 10px;
+}
+
+.container .card .price-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  padding: 3rem 2rem 0;
+}
+
+.container .card .price-container .pageviews {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.container .card .price-container .range {
+  margin: 4rem 0;
+  -webkit-appearance: none;
+  background: #eaeefb;
+  height: 0.8rem;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.container .card .price-container .range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 3.5rem;
+  width: 3.5rem;
+  background: url(../images/icon-slider.svg) center center no-repeat, #10d5c2;
+  background-size: 55%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 1.5rem 1.5rem #a5f3eb;
+          box-shadow: 0 1.5rem 1.5rem #a5f3eb;
+}
+
+.container .card .price-container .range::-webkit-slider-thumb:hover, .container .card .price-container .range::-webkit-slider-thumb:focus {
+  opacity: 0.7;
+}
+
+.container .card .price-container .price-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-row: 3;
+  grid-row: 3/3;
+}
+
+.container .card .price-container .price-div .price {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #293356;
+  margin-right: 0.5rem;
+}
+
+.container .card .price-container .price-div .month {
+  font-size: 1.4rem;
+  vertical-align: middle;
+  font-weight: 600;
+}
+
+.container .card .toggle-container {
+  text-align: right;
+  padding-right: 1rem;
+  margin: 3rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.container .card .toggle-container .billing-duration {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.container .card .toggle-container .switch {
+  margin: 0 1rem;
+  position: relative;
+  display: inline-block;
+  width: 4rem;
+  height: 2rem;
+  vertical-align: middle;
+  /* Hide default HTML checkbox */
+  /* The slider */
+  /* Rounded sliders */
+}
+
+.container .card .toggle-container .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.container .card .toggle-container .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cdd7ee;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.container .card .toggle-container .switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 1.5rem;
+  width: 1.5rem;
+  left: 0.3rem;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.container .card .toggle-container .switch input:checked + .slider {
+  background-color: #a5f3eb;
+}
+
+.container .card .toggle-container .switch input:checked + .slider:before {
+  -webkit-transform: translate(2rem, 50%);
+  transform: translate(2rem, 50%);
+}
+
+.container .card .toggle-container .switch .slider.round {
+  border-radius: 50px;
+}
+
+.container .card .toggle-container .switch .slider.round:before {
+  border-radius: 50%;
+}
+
+.container .card .toggle-container .discount {
+  background: #feece7;
+  color: #ff8c66;
+  padding: 0.3rem 1rem;
+  border-radius: 50px;
+  font-weight: 800;
+  margin-left: 0.5rem;
+}
+
+.container .card hr {
+  border: none;
+  height: 1px;
+  background: #eaeefb;
+}
+
+.container .card .card-footer {
+  padding: 2rem 0;
+}
+
+.container .card .card-footer ul {
+  list-style-image: url(../images/icon-check.svg);
+}
+
+.container .card .card-footer ul .benefits {
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  margin: 0 auto 1rem;
+  padding-left: 0.5rem;
+}
+
+.container .card .card-footer .start-link {
+  padding: 1rem 5rem;
+  background: #293356;
+  font-size: 1.2rem;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 2rem auto 1rem;
+  border-radius: 50px;
+  font-weight: 800;
+  color: #bdccff;
+  cursor: pointer;
+}
+
+.container .card .card-footer .start-link:hover, .container .card .card-footer .start-link:focus {
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container {
+    min-width: 500px;
+    text-align: left;
+  }
+  .container .heading-container {
+    text-align: center;
+  }
+  .container .heading-container .heading {
+    font-size: 2.8rem;
+  }
+  .container .heading-container .sub-text {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+  .container .heading-container .sub-text span {
+    display: initial;
+  }
+  .container .card .price-container {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 3rem 3rem 0;
+  }
+  .container .card .price-container .pageviews {
+    font-size: 1.5rem;
+  }
+  .container .card .price-container .price-div {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 1;
+    grid-row: 1/1;
+  }
+  .container .card .price-container .price-div .price {
+    font-size: 3.5rem;
+  }
+  .container .card .price-container .price-div .month {
+    font-size: 1.5rem;
+  }
+  .container .card .price-container .range {
+    grid-column: span 2;
+  }
+  .container .card .toggle-container {
+    margin: 0 0 3rem;
+    padding-right: 4rem;
+  }
+  .container .card .toggle-container .billing-duration {
+    font-size: 1.3rem;
+  }
+  .container .card .toggle-container .discount {
+    margin-left: 0.7rem;
+  }
+  .container .card .card-footer {
+    padding: 2rem 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container .card .card-footer ul .benefits {
+    width: initial;
+    font-size: 1.3rem;
+  }
+  .container .card .card-footer .start-link {
+    margin: 0;
+    font-size: 1.3rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

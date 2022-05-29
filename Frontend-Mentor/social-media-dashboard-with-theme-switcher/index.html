@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script defer src="index.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="heading-container">
+        <div class="heading-div">
+          <h1 class="main-heading">Social Media Dashboard</h1>
+          <h2 class="heading-subtext">Total Followers: 23,004</h2>
+        </div>
+        <hr />
+        <div class="toggle-container">
+          <p class="mode">Dark Mode</p>
+          <label class="toggle">
+            <input type="checkbox" class="toggle-input" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="overall-cards">
+        <div class="card card-facebook">
+          <div class="username-div">
+            <img
+              src="images/icon-facebook.svg"
+              alt="icon-facebook"
+              class="social-icon"
+            />
+            <span class="username">@nathanf</span>
+          </div>
+          <h3 class="followers">1987</h3>
+          <p class="followers-subtext">followers</p>
+          <div class="update-today-div">
+            <img src="images/icon-up.svg" alt="icon-up" />
+            <span class="update-today up">12 Today</span>
+          </div>
+        </div>
+
+        <div class="card card-twitter">
+          <div class="username-div">
+            <img
+              src="images/icon-twitter.svg"
+              alt="icon-twitter"
+              class="social-icon"
+            />
+            <span class="username">@nathanf</span>
+          </div>
+          <h3 class="followers">1044</h3>
+          <p class="followers-subtext">followers</p>
+          <div class="update-today-div">
+            <img src="images/icon-up.svg" alt="icon-up" />
+            <span class="update-today up">99 Today</span>
+          </div>
+        </div>
+
+        <div class="card card-instagram">
+          <div class="username-div">
+            <img
+              src="images/icon-instagram.svg"
+              alt="icon-instagram"
+              class="social-icon"
+            />
+            <span class="username">@realnathanf</span>
+          </div>
+          <h3 class="followers">11K</h3>
+          <p class="followers-subtext">followers</p>
+          <div class="update-today-div">
+            <img src="images/icon-up.svg" alt="icon-up" />
+            <span class="update-today up">1099 Today</span>
+          </div>
+        </div>
+
+        <div class="card card-youtube">
+          <div class="username-div">
+            <img
+              src="images/icon-youtube.svg"
+              alt="icon-youtube"
+              class="social-icon"
+            />
+            <span class="username">Nathan F.</span>
+          </div>
+          <h3 class="followers">8239</h3>
+          <p class="followers-subtext">Subscribers</p>
+          <div class="update-today-div">
+            <img src="images/icon-down.svg" alt="icon-down" />
+            <span class="update-today down">144 Today</span>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="sub-heading">Overview - Today</h3>
+
+      <div class="today-cards">
+        <div class="today-card">
+          <div class="top-div">
+            <h4 class="stat-title">Page Views</h4>
+            <img src="images/icon-facebook.svg" alt="icon-facebook" />
+          </div>
+          <div class="bottom-div">
+            <h5 class="stat">87</h5>
+            <div class="update-today-div">
+              <img src="images/icon-up.svg" alt="icon-up" />
+              <span class="update-today up">3%</span>
+            </div>
+          </div>
+        </div>
+        <div class="today-card">
+          <div class="top-div">
+            <h4 class="stat-title">Likes</h4>
+            <img src="images/icon-facebook.svg" alt="icon-facebook" />
+          </div>
+          <div class="bottom-div">
+            <h5 class="stat">52</h5>
+            <div class="update-today-div">
+              <img src="images/icon-down.svg" alt="icon-down" />
+              <span class="update-today down">2%</span>
+            </div>
+          </div>
+        </div>
+        <div class="today-card">
+          <div class="top-div">
+            <h4 class="stat-title">Likes</h4>
+            <img src="images/icon-instagram.svg" alt="icon-instagram" />
+          </div>
+          <div class="bottom-div">
+            <h5 class="stat">5462</h5>
+            <div class="update-today-div">
+              <img src="images/icon-up.svg" alt="icon-up" />
+              <span class="update-today up">2257%</span>
+            </div>
+          </div>
+        </div>
+        <div class="today-card">
+          <div class="top-div">
+            <h4 class="stat-title">Profile Views</h4>
+            <img src="images/icon-instagram.svg" alt="icon-instagram" />
+          </div>
+          <div class="bottom-div">
+            <h5 class="stat">52k</h5>
+            <div class="update-today-div">
+              <img src="images/icon-up.svg" alt="icon-up" />
+              <span class="update-today up">1375%</span>
+            </div>
+          </div>
+        </div>
+        <div class="today-card">
+          <div class="top-div">
+            <h4 class="stat-title">Retweets</h4>
+            <img src="images/icon-twitter.svg" alt="icon-twitter" />
+          </div>
+          <div class="bottom-div">
+            <h5 class="stat">117</h5>
+            <div class="update-today-div">
+              <img src="images/icon-up.svg" alt="icon-up" />
+              <span class="update-today up">303%</span>
+            </div>
+          </div>
+        </div>
+        <div class="today-card">
+          <div class="top-div">
+            <h4 class="stat-title">Likes</h4>
+            <img src="images/icon-twitter.svg" alt="icon-twitter" />
+          </div>
+          <div class="bottom-div">
+            <h5 class="stat">507</h5>
+            <div class="update-today-div">
+              <img src="images/icon-up.svg" alt="icon-up" />
+              <span class="update-today up">553%</span>
+            </div>
+          </div>
+        </div>
+        <div class="today-card">
+          <div class="top-div">
+            <h4 class="stat-title">Likes</h4>
+            <img src="images/icon-youtube.svg" alt="icon-youtube" />
+          </div>
+          <div class="bottom-div">
+            <h5 class="stat">107</h5>
+            <div class="update-today-div">
+              <img src="images/icon-down.svg" alt="icon-down" />
+              <span class="update-today down">19%</span>
+            </div>
+          </div>
+        </div>
+        <div class="today-card">
+          <div class="top-div">
+            <h4 class="stat-title">Total Views</h4>
+            <img src="images/icon-youtube.svg" alt="icon-youtube" />
+          </div>
+          <div class="bottom-div">
+            <h5 class="stat">1407</h5>
+            <div class="update-today-div">
+              <img src="images/icon-down.svg" alt="icon-down" />
+              <span class="update-today down">12%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

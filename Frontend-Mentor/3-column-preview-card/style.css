@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  height: 100vh;
+}
+
+.main {
+  max-width: 860px;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.main .cars {
+  padding: 30px;
+}
+
+.heading {
+  text-transform: uppercase;
+  color: hsl(0, 0%, 95%);
+  font-size: 25px;
+  font-family: "Big Shoulders Display", cursive;
+  letter-spacing: 1px;
+  margin: 20px 0;
+}
+
+.sub-text {
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.8;
+  height: 200px;
+}
+
+.learn-link {
+  padding: 10px 20px;
+  background-color: hsl(0, 0%, 95%);
+  border-radius: 50px;
+  text-decoration: none;
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.sedan {
+  background-color: hsl(31, 77%, 52%);
+}
+
+.suv {
+  background-color: hsl(184, 100%, 22%);
+}
+
+.luxury {
+  background-color: hsl(179, 100%, 13%);
+}
+
+.sedan .learn-link {
+  color: hsl(31, 77%, 52%);
+  border: 2px solid transparent;
+}
+
+.suv .learn-link {
+  color: hsl(184, 100%, 22%);
+}
+
+.luxury .learn-link {
+  color: hsl(179, 100%, 13%);
+}
+
+.learn-link:hover {
+  color: hsl(0, 0%, 95%);
+}
+
+.sedan .learn-link:hover {
+  background: hsl(31, 77%, 52%);
+  border: 2px solid;
+}
+
+.suv .learn-link:hover {
+  background: hsl(184, 100%, 22%);
+  border: 2px solid;
+}
+
+.luxury .learn-link:hover {
+  background: hsl(179, 100%, 13%);
+  border: 2px solid;
+}
+
+@media screen and (max-width: 870px) {
+  .main {
+    max-width: 90%;
+  }
+  .sub-text {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 652px) {
+  body {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+   body {
+    height: fit-content;
+    margin: 25px 0;
+  }
+  .main {
+    flex-direction: column;
+  }
+  .sub-text {
+    height: fit-content;
+    margin-bottom: 20px;
+  }
+}

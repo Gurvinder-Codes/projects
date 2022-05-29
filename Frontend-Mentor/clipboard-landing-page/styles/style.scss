@@ -1,0 +1,439 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+
+// ### Primary
+
+$strong-cyan: hsl(171, 66%, 44%);
+$light-blue: hsl(233, 100%, 69%);
+
+// ### Neutral
+
+$dark-grayish-blue: hsl(210, 10%, 33%);
+$grayish-blue: hsl(201, 11%, 66%);
+
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  background: url(../images/bg-header-mobile.png) top right no-repeat;
+  background-size: 100vw 40vh;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .container {
+    margin: 0 2.5rem;
+    text-align: center;
+
+    .intro {
+      margin: 10rem 0;
+      .logo {
+        height: 7rem;
+      }
+
+      .heading {
+        margin: 4rem 0 1rem;
+        font-size: 3.2rem;
+        color: $dark-grayish-blue;
+      }
+
+      .heading-subtext {
+        color: $grayish-blue;
+        line-height: 1.6;
+        font-size: 1.7rem;
+      }
+    }
+
+    .btn-div {
+      margin-top: 4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .download-btn {
+        border-radius: 50px;
+        padding: 1.5rem;
+        display: block;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        font-weight: 400;
+        font-size: 1.7rem;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      .ios-btn {
+        background: $strong-cyan;
+        box-shadow: 0 3px hsl(171, 66%, 38%),
+          0 15px 20px hsla(171, 86%, 58%, 0.3);
+      }
+
+      .mac-btn {
+        background: $light-blue;
+        box-shadow: 0 3px hsl(233, 56%, 55%);
+      }
+    }
+
+    .subheading {
+      font-size: 2.8rem;
+      font-weight: 600;
+      color: $dark-grayish-blue;
+      margin-bottom: 1rem;
+    }
+
+    .subheading-subtext {
+      font-size: 1.7rem;
+      color: $grayish-blue;
+      margin-bottom: 5rem;
+      line-height: 1.6;
+    }
+
+    .features-container {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+
+      .feature-div {
+        .feature {
+          font-size: 2.2rem;
+          color: $dark-grayish-blue;
+          margin-bottom: 1rem;
+          font-weight: 600;
+        }
+
+        .feature-subtext {
+          font-size: 1.7rem;
+          color: $grayish-blue;
+          line-height: 1.4;
+        }
+      }
+    }
+
+    .section1 {
+      margin-bottom: 15rem;
+      .features-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+      }
+    }
+
+    .section2 {
+      margin-bottom: 10rem;
+    }
+
+    .section3 {
+      margin-bottom: 10rem;
+      .subheading-subtext {
+        margin-bottom: 8rem;
+      }
+    }
+
+    .section4 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5rem;
+      margin-bottom: 10rem;
+    }
+
+    .section5 {
+      margin-bottom: 10rem;
+    }
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: hsla(201, 11%, 66%, 0.2);
+    padding: 4rem;
+    text-align: center;
+    gap: 3rem;
+
+    .footer-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+      .footer-logo {
+        height: 4rem;
+      }
+
+      ul {
+        list-style-type: none;
+
+        li {
+          margin-bottom: 2rem;
+        }
+
+        .single-link {
+          margin: 0;
+        }
+
+        .link {
+          color: $dark-grayish-blue;
+          font-size: 1.5rem;
+          text-decoration: none;
+          font-weight: 600;
+
+          &:hover {
+            color: $strong-cyan;
+          }
+        }
+      }
+    }
+
+    .social-icons {
+      a:not(:last-child) {
+        margin-right: 4rem;
+      }
+
+      a {
+        font-size: 2.5rem;
+        color: $dark-grayish-blue;
+        cursor: pointer;
+
+        &:hover {
+          color: $strong-cyan;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    .container {
+      margin: 0 4rem;
+      .btn-div {
+        flex-direction: row;
+        justify-content: center;
+
+        .download-btn {
+          width: fit-content;
+          padding: 1.5rem 4rem;
+        }
+      }
+
+      .features-container {
+        flex-direction: row;
+      }
+
+      .section1 {
+        .features-wrapper {
+          flex-direction: row;
+          gap: 4rem;
+          text-align: left;
+          align-items: center;
+
+          .features-container {
+            flex-direction: column;
+          }
+        }
+      }
+
+      .section3 {
+        .features-container {
+          gap: 1rem;
+          align-items: baseline;
+
+          .feature-div {
+            .feature {
+              margin-top: 2rem;
+            }
+          }
+        }
+      }
+
+      .section4 {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+    .footer {
+      flex-direction: row;
+      align-items: center;
+      gap: 5rem;
+      justify-content: space-between;
+
+      .footer-left {
+        flex-direction: row;
+
+        .links {
+          text-align: left;
+          display: flex;
+          gap: 5rem;
+
+          ul {
+            li {
+              margin: 0;
+            }
+
+            li:first-child {
+              margin-bottom: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+
+      .intro {
+        width: 75%;
+        margin: 10rem auto;
+        .heading {
+          font-size: 3.6rem;
+        }
+      }
+
+      .section1,
+      .section2,
+      .section5 {
+        width: 75%;
+        margin: 0 auto 10rem;
+      }
+
+      .features-container {
+        flex-direction: row;
+      }
+
+      .section1 {
+        width: 110%;
+        padding-right: 10rem;
+        .subheading,
+        .subheading-subtext {
+          width: 75%;
+          margin: 0 auto;
+        }
+
+        .subheading {
+          margin-bottom: 1rem;
+        }
+        .subheading-subtext {
+          margin-bottom: 6rem;
+        }
+        .features-wrapper {
+          margin-left: -10%;
+          gap: 5rem;
+
+          .left {
+            width: 60%;
+          }
+
+          .features-container {
+            width: 40%;
+          }
+        }
+      }
+
+      .section2 {
+        margin-bottom: 5rem;
+      }
+
+      .section3 {
+        .features-container {
+          gap: 3rem;
+          .feature-div {
+            flex: 1;
+          }
+        }
+      }
+
+      .section4 {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+      }
+    }
+
+    .footer {
+      padding: 4rem 7rem;
+      .footer-left {
+        gap: 10rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    .container {
+      max-width: 1200px;
+
+      .intro {
+        width: 50%;
+      }
+
+      .section1,
+      .section2,
+      .section5 {
+        width: 50%;
+      }
+
+      .section1 {
+        width: 110%;
+        padding-right: 15rem;
+        .subheading,
+        .subheading-subtext {
+          width: 50%;
+          margin: 0 auto;
+        }
+
+        .subheading {
+          margin-bottom: 1rem;
+        }
+        .subheading-subtext {
+          margin-bottom: 6rem;
+        }
+        .features-wrapper {
+          margin-left: -16%;
+          gap: 0;
+          padding-right: 5rem;
+
+          .left {
+            width: 65%;
+          }
+
+          .features-container {
+            width: 35%;
+          }
+        }
+      }
+    }
+    .footer {
+      padding: 4rem 12rem;
+      justify-content: space-between;
+
+      .footer-left {
+        gap: 15rem;
+        .links {
+          gap: 10rem;
+        }
+      }
+    }
+  }
+}

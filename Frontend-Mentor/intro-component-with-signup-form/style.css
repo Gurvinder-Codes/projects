@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+body {
+  background: url(./images/bg-intro-mobile.png) no-repeat, var(--red);
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  margin: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.left {
+  text-align: center;
+  color: #fff;
+}
+
+.heading {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.text {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.price-info {
+  background: var(--blue);
+  padding: 15px 45px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 0.9rem;
+  text-align: center;
+  line-height: 1.7;
+  box-shadow: 0 8px hsla(249, 10%, 26%, 0.2);
+  margin-bottom: 20px;
+}
+
+.price-info span {
+  font-weight: 700;
+}
+
+.form-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px hsla(249, 10%, 26%, 0.2);
+}
+
+.form-container input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid var(--grayish-blue);
+  color: var(--dark-blue);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.form-container input:not(:first-child) {
+  margin-top: 15px;
+}
+
+.form-container input:focus {
+  outline: none;
+  border: 1px solid var(--blue);
+}
+
+.form-container input::placeholder {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.submit-btn {
+  text-align: center;
+  width: 100%;
+  padding: 15px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 600;
+  background: var(--green);
+  opacity: 0.9;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  box-shadow: 0 4px hsl(154deg 92% 36%);
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  opacity: 0.7;
+}
+
+.form-footer {
+  color: var(--grayish-blue);
+  font-weight: 500;
+  text-align: center;
+  font-size: 0.7rem;
+}
+
+.form-footer span {
+  font-weight: 700;
+  color: var(--red);
+}
+
+.error-msg {
+  font-size: 0.6rem;
+  float: right;
+  margin-top: 4px;
+  color: var(--red);
+  font-weight: 500;
+  display: none;
+}
+
+.error {
+  background: url(./images/icon-error.svg) right 15px center no-repeat;
+  border: 2px solid var(--red) !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.show-error {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(./images/bg-intro-desktop.png) no-repeat, var(--red);
+  }
+  .container {
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    margin: 4rem 2rem;
+  }
+
+  .left,
+  .right {
+    flex: 1;
+  }
+
+  .left {
+    text-align: left;
+  }
+
+  .price-info {
+    padding: 15px 30px;
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 850px;
+    margin: 0;
+  }
+
+  .heading {
+    font-size: 2.4rem;
+  }
+
+  .price-info {
+    padding: 15px 45px;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 950px;
+  }
+
+  .heading {
+    font-size: 2.8rem;
+  }
+}

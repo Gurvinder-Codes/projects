@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap");
+
+// ### Primary
+
+$red: hsl(0, 100%, 68%);
+
+// ### Neutral
+
+$very-dark-blue: hsl(230, 29%, 20%);
+$dark-grayish-blue: hsl(230, 11%, 40%);
+$grayish-blue: hsl(231, 7%, 65%);
+$light-grayish-blue: hsl(207, 33%, 95%);
+
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow Condensed", sans-serif;
+  height: 100vh;
+
+  .bg {
+    width: 52vw;
+    height: 55vh;
+    border-bottom-left-radius: 50px;
+    position: absolute;
+    background: $light-grayish-blue;
+    z-index: -1;
+    top: 0;
+    right: 0;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+
+    font-weight: 700;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  header {
+    padding: 3rem 3rem 0;
+    .logo {
+      height: 2rem;
+    }
+
+    .navbar {
+      display: none;
+    }
+
+    ul {
+      list-style-type: none;
+
+      .link {
+        color: $very-dark-blue;
+      }
+    }
+
+    .login-link {
+      color: $grayish-blue;
+    }
+
+    .mobile-navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+
+      .menu-btn {
+        cursor: pointer;
+        background: transparent;
+        border: none;
+      }
+
+      ul {
+        li:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+      }
+
+      hr {
+        border: none;
+        height: 2px;
+        background: $light-grayish-blue;
+        margin: 1.5rem 0;
+      }
+
+      .menu {
+        position: absolute;
+        background: #fff;
+        padding: 2rem;
+        width: 100%;
+        top: 5rem;
+        border-radius: 5px;
+        text-align: center;
+        box-shadow: 5px 5px 8px hsla(0, 2%, 83%, 0.2),
+          -5px -5px 8px hsla(0, 2%, 83%, 0.2);
+        display: none;
+      }
+    }
+  }
+
+  .container {
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    gap: 5rem;
+    text-transform: uppercase;
+    overflow: hidden;
+    height: max-content;
+
+    .left {
+      order: 2;
+
+      .heading-div {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        .heading {
+          font-family: "Barlow", sans-serif;
+          font-weight: 400;
+          font-size: 1.4rem;
+          letter-spacing: 3px;
+          color: $grayish-blue;
+        }
+
+        .heading-before {
+          background: $very-dark-blue;
+          color: #fff;
+          font-size: 1.4rem;
+          font-weight: 700;
+          padding: 0.2rem 1rem;
+          border-radius: 50px;
+        }
+      }
+
+      .subheading {
+        font-size: 3.8rem;
+        line-height: 1;
+        margin: 1.5rem 0;
+        color: $very-dark-blue;
+      }
+
+      .subheading-subtext {
+        text-transform: initial;
+        color: $dark-grayish-blue;
+        font-weight: 400;
+        font-size: 2rem;
+        font-family: "Barlow", sans-serif;
+      }
+
+      .demo-div {
+        display: flex;
+        align-items: center;
+        margin-top: 4rem;
+
+        .schedule-link {
+          padding: 1rem 2rem;
+          font-size: 1.4rem;
+          background: $red;
+          color: #fff;
+          border-radius: 5px;
+          margin-right: 1rem;
+
+          &:hover {
+            opacity: 0.7;
+            text-decoration: none;
+          }
+        }
+
+        .schedule-subtext {
+          font-size: 1.4rem;
+          color: $dark-grayish-blue;
+          letter-spacing: 2px;
+        }
+      }
+    }
+
+    .right {
+      margin-right: -15rem;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    a {
+      font-size: 1.8rem;
+    }
+
+    header {
+      padding: 5rem;
+
+      .logo {
+        height: initial;
+      }
+
+      .mobile-navbar {
+        display: none;
+      }
+
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .nav-right {
+          display: flex;
+          gap: 5rem;
+        }
+
+        ul {
+          display: flex;
+          gap: 3rem;
+        }
+      }
+    }
+
+    .container {
+      padding: 0 5rem 0;
+      flex-direction: row;
+      margin-top: 10rem;
+      align-items: center;
+
+      .left {
+        flex: 1;
+      }
+
+      .right {
+        flex: 1.5;
+      }
+
+      .left {
+        order: -1;
+
+        .heading-div {
+          .heading {
+            font-size: 1.2rem;
+          }
+
+          .heading-before {
+            font-size: 1.2rem;
+          }
+        }
+
+        .subheading {
+          font-size: 4rem;
+          margin: 2rem 0;
+        }
+
+        .subheading-subtext {
+          font-size: 1.6rem;
+          width: 28ch;
+        }
+
+        .demo-div {
+          margin-top: 6rem;
+
+          .schedule-link {
+            font-size: 1.6rem;
+          }
+
+          .schedule-subtext {
+            font-size: 1.6rem;
+            letter-spacing: 2px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    a {
+      font-size: 2rem;
+    }
+
+    .container {
+      .left {
+        .heading-div {
+          .heading {
+            font-size: 1.4rem;
+          }
+
+          .heading-before {
+            font-size: 1.4rem;
+          }
+        }
+
+        .subheading {
+          font-size: 5rem;
+        }
+
+        .subheading-subtext {
+          font-size: 1.8rem;
+        }
+
+        .demo-div {
+          margin-top: 5rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    header {
+      padding: 5rem 10rem 0 10rem;
+    }
+
+    .container {
+      padding-left: 10rem;
+      .left {
+        .heading-div {
+          .heading {
+            font-size: 1.6rem;
+          }
+
+          .heading-before {
+            font-size: 1.6rem;
+          }
+        }
+
+        .subheading {
+          font-size: 6.8rem;
+        }
+
+        .subheading-subtext {
+          font-size: 2rem;
+        }
+
+        .demo-div {
+          .schedule-link {
+            font-size: 1.8rem;
+          }
+
+          .schedule-subtext {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+  }
+}

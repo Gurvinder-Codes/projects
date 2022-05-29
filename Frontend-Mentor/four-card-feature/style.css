@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: hsl(0, 0%, 98%);
+}
+
+main {
+  max-width: 1000px;
+}
+
+.heading-container {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sub-text {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.crd {
+  flex: 1;
+}
+
+.middle .card:first-child {
+  margin-bottom: 20px;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 30px hsl(240, 4%, 85%);
+  flex: 1;
+}
+
+.heading,
+.heading-bold {
+  font-weight: 200;
+  font-size: 2rem;
+  color: hsl(234, 12%, 34%);
+  margin: 0;
+}
+
+.heading-bold {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.sub-text {
+  font-size: 0.9rem;
+  color: hsl(229, 6%, 66%);
+}
+
+.card-heading {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: hsl(234, 12%, 34%);
+}
+
+.card-text {
+  color: hsl(229, 6%, 66%);
+  font-size: 0.9rem;
+}
+
+.supervisor {
+  border-top: 6px solid hsl(180, 62%, 55%);
+}
+
+.team {
+  border-top: 6px solid hsl(0, 78%, 62%);
+}
+
+.karma {
+  border-top: 6px solid hsl(34, 97%, 64%);
+}
+
+.calculator {
+  border-top: 6px solid hsl(212, 86%, 64%);
+}
+
+.card-img {
+  margin-top: 30px;
+  text-align: right;
+}
+
+.card-img img {
+  object-fit: contain;
+  height: 60px;
+}
+
+@media screen and (max-width: 1142px) {
+  :root {
+    font-size: 12px;
+  }
+  body {
+    height: 100vh;
+  }
+  main {
+    width: 90%;
+  }
+  .heading-container {
+    margin-bottom: 30px;
+  }
+  .cards {
+    gap: 15px;
+  }
+  .heading-bold {
+    margin-bottom: 8px;
+  }
+  .middle .card:first-child {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .heading {
+    font-size: 2.6rem;
+  }
+
+  .sub-text {
+    font-size: 1rem;
+  }
+
+  .card-text {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .card {
+    padding: 15px;
+  }
+
+  .card-img img {
+    height: 50px;
+  }
+
+  .heading {
+    font-size: 2.4rem;
+  }
+
+  .sub-text {
+    font-size: 0.9rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    margin: 4rem 2rem;
+  }
+  
+  .heading {
+  font-size: 2rem;
+  }
+
+  body {
+    height: 90%;
+  }
+
+  .sub-text {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .crd {
+    width: 100%;
+  }
+
+  .card-heading {
+    font-size: 2.4rem;
+  }
+
+  .card-text {
+    font-size: 1.1rem;
+  }
+
+  .card-img {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .heading,
+  .heading-bold {
+    font-size: 1.8rem;
+  }
+
+  .sub-text {
+    font-size: 1rem;
+  }
+
+  .card-heading {
+    font-size: 2rem;
+  }
+
+  .card-text {
+    font-size: 1rem;
+  }
+}

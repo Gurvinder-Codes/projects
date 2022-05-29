@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 12px;
+  --dark-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+  --very-dark-greyish-blue: hsl(237, 12%, 33%);
+  --dark-greyish-blue: hsl(240, 6%, 50%);
+  --light-blue: hsl(240, 5%, 91%);
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background: linear-gradient(var(--soft-violet), var(--soft-blue)) no-repeat;
+  min-height: 100vh;
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.container {
+  margin: 14rem 0 6rem 0;
+  width: 90%;
+}
+.card {
+  border-radius: 10px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0 20px 20px;
+}
+
+.illustration,
+.faqs {
+  flex: 1;
+}
+
+.illustration {
+  margin-top: -45%;
+  padding-bottom: 5%;
+  background: url(./images/bg-pattern-mobile.svg) center no-repeat;
+  background-size: cover;
+}
+
+.box {
+  display: none;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--dark-blue);
+  font-size: 2.5rem;
+}
+
+.faq-container {
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--light-blue);
+  padding-bottom: 15px;
+}
+
+.question-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  color: var(--very-dark-greyish-blue);
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.question-container:hover:not(.active) {
+  color: var(--soft-red);
+}
+
+.answer {
+  padding-top: 10px;
+  color: var(--dark-greyish-blue);
+  display: none;
+}
+
+.question,
+.arrow {
+  transition: all 0.3s ease-in;
+}
+
+.active {
+  font-weight: 700;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    font-size: 13px;
+  }
+
+  .container {
+    margin: 0 7rem;
+  }
+
+  .card {
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    padding: 20px;
+    background: url(./images/bg-pattern-desktop.svg) no-repeat, #fff;
+    background-size: cover;
+    background-position: right 344px bottom -55px;
+  }
+
+  .illustration {
+    margin-top: 0;
+    padding: 0;
+    margin-left: -12%;
+    background: none;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .box {
+    display: block;
+    width: 150px;
+    position: absolute;
+    top: 38%;
+    left: -18%;
+  }
+
+  .heading {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    margin: 0;
+    max-width: 800px;
+  }
+
+  .card {
+    gap: 60px;
+    padding: 50px;
+    background-position: right 475px bottom -110px;
+  }
+
+  .box {
+    top: 41%;
+    left: -12%;
+  }
+
+  .illustration {
+    margin-left: -15%;
+  }
+}
