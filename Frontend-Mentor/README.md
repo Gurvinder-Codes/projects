@@ -1,4 +1,4 @@
-1. [IP Address Tracker](https://gurvinder-codes.github.io/Frontend-Mentor/ip-address-tracker)
+1. [IP Address Tracker](https://gurvinder-codes.github.io/Projects/Frontend-Mentor/ip-address-tracker)
 2. [Launch Countdown Timer](https://gurvinder-codes.github.io/Frontend-Mentor/launch-countdown-timer)
 3. [Social Media Dashboard with Theme Switcher](https://gurvinder-codes.github.io/Frontend-Mentor/social-media-dashboard-with-theme-switcher) 
 4. [Sunnyside Agency Landing Page](https://gurvinder-codes.github.io/Frontend-Mentor/sunnyside-agency-landing-page)
