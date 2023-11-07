@@ -1,3 +1,4 @@
+1. [Expenses Chart Component](https://gurvinder-codes.github.io/Projects/Frontend-Mentor/expenses-chart-component)
 1. [Age Calculator App](https://gurvinder-codes.github.io/Projects/Frontend-Mentor/age-calculator-app)
 2. [IP Address Tracker](https://gurvinder-codes.github.io/Projects/Frontend-Mentor/ip-address-tracker)
 3. [Launch Countdown Timer](https://gurvinder-codes.github.io/Projects/Frontend-Mentor/launch-countdown-timer)
